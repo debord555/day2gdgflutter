@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dice_roller/components/dice_roller.dart';
 
 void main() {
   runApp(
@@ -22,39 +23,9 @@ void main() {
         backgroundColor: Color(
           0xff1a0250,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/dice-1.png',
-                width: 200,
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  minimumSize: Size(
-                    120,
-                    40,
-                  ),
-                  backgroundColor: Color(
-                    0xFFE0E0E0,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                      10,
-                    ),
-                  ),
-                ),
-                child: Text('ROLL'),
-              )
-            ],
-          ),
-        ),
+        body: DiceRoller(),
       ),
     ),
   );
 }
+
